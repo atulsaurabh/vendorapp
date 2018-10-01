@@ -16,7 +16,8 @@ import javax.sql.DataSource;
 @ComponentScan(basePackages = {
                                "com.technoride.abb.vendorapp.loader",
                                 "com.technoride.abb.vendorapp.controller",
-                                "com.technoride.abb.vendorapp.task"
+                                "com.technoride.abb.vendorapp.task",
+                                "com.technoride.abb.vendorapp.repository"
 })
 @PropertySources(value = {
         @PropertySource(value = "classpath:applicationContext.properties")
