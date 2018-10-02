@@ -5,4 +5,5 @@ public interface GUIInfo {
     public static final String GUI_HOME="/gui/";
     public static final String LOADER_SCREEN="loader_screen.fxml";
     public static final String LOGIN_SCREEN="login.fxml";
+    public static final String ENTRY_SCREEN="entry.fxml";
 }

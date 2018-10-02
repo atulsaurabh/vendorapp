@@ -41,6 +41,7 @@ public class MainScreenLoaderControoler implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initaltaskProgressbar.setProgress(0);
+        initaltaskProgressbar.setStyle("-fx-accent:#834bff");
         message.textProperty().bind(initialTask.messageProperty());
         //InitialTask initialTask = new InitialTask();
         initialTask.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED, new EventHandler<WorkerStateEvent>() {
@@ -54,6 +55,8 @@ public class MainScreenLoaderControoler implements Initializable {
                     ((Stage)window.getScene().getWindow()).close();
                     Stage stage = new Stage();
                     WindowAndController windowAndController = vendorAppLoader.load(GUIInfo.LOGIN_SCREEN);
+                    LoginController loginController =(LoginController) windowAndController.getController();
+                    loginController.setWindow(stage);
                     Scene scene = new Scene(windowAndController.getWindow());
                     stage.setScene(scene);
                     stage.setResizable(false);
