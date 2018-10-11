@@ -1,24 +1,31 @@
 .theme
 {
-   -fx-background-color:#26c6da;
+   -fx-background-color:#03a9f4;
 }
 
 .buttonColor
 {
-   -fx-background-color: #4615b2;
-   -fx-text-fill: white;
+   -fx-background-color: #651fff;
+   -fx-text-fill: #ffffff;
+   -fx-font-weight: bold;
+   -fx-font-size: 26;
 }
 
 .heading
 {
-   -fx-background-color: #1a8a98;
+   -fx-background-color: #0276aa;
 }
 
 
 
+.label
+{
+  -fx-text-fill: #000000;
+}
+
 .footer
 {
-   -fx-background-color: #51d1e1;
+   -fx-background-color: #35baf6;
 }
 
 .txtBarcodeBox
@@ -33,7 +40,39 @@
    -fx-font-size:20;
 }
 
+
+
+.jfx-password-field
+{
+   -fx-text-fill: white;
+   -fx-font-size: 20;
+}
+
 .jfx-time-picker .jfx-text-field{
 
    -fx-font-size:20;
+}
+
+.jfx-time-picker .label
+{
+   -fx-text-fill: #000000;
+}
+
+.jfx-text-field
+{
+   -fx-text-fill: white;
+   -fx-font-size: 20;
+}
+
+
+.table-view .table-column
+{
+   -fx-alignment: center;
+   -fx-font-size: 18;
+}
+
+.table-view .table-cell
+{
+   -fx-font-size: 18;
+   -fx-font-weight: bold;
 }

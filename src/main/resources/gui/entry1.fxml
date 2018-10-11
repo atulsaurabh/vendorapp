@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" styleClass="mainFxmlClass" stylesheets="@../css/theme_abb.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technoride.abb.vendorapp.controller.EntryPanelController">
+   <children>
+      <SplitPane fx:id="SplitPane" dividerPositions="0.5" layoutX="362.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="700.0" prefWidth="1360.0" styleClass="SplitPaneBackground" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="abb601Pane" SplitPane.resizableWithParent="false">
+               <children>
+                  <GridPane fx:id="gridPaneTop" alignment="CENTER" hgap="5.0" layoutX="210.0" layoutY="137.0" prefHeight="290.0" prefWidth="998.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="336.0" styleClass="toplable" text="Order No" textAlignment="CENTER" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="328.0" styleClass="toplable" text="Serial No" textAlignment="CENTER" GridPane.columnIndex="2" />
+                        <TextField fx:id="barcode" styleClass="topTextField" GridPane.columnIndex="1" />
+                        <TextField fx:id="serialnumber" styleClass="topTextField" GridPane.columnIndex="3" />
+                        <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" styleClass="topbutton" text="Report" textAlignment="CENTER" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" styleClass="topbutton" text="Certificate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#openBarCodeScannerWindow" styleClass="topbutton" text="Bar Code" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#submitResult" styleClass="topbutton" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="334.0" styleClass="toplable" text="Category" textAlignment="CENTER" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="334.0" styleClass="toplable" text="Varient" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="335.0" styleClass="toplable" text="Testing Authority" textAlignment="CENTER" GridPane.rowIndex="2" />
+                        <TextField fx:id="testingAuthority" styleClass="topTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="335.0" styleClass="toplable" text="Time" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="currentTimePane" alignment="CENTER" prefHeight="55.0" prefWidth="343.0" styleClass="toplable" text="Label" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="335.0" styleClass="toplable" text="Date" textAlignment="CENTER" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="334.0" styleClass="topTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="337.0" styleClass="toplable" text="Test Result" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="testresult" alignment="CENTER" prefHeight="17.0" prefWidth="338.0" styleClass="toplable" text="Label" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="category" editable="false" styleClass="topTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="subcategory" editable="false" styleClass="topTextField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </GridPane>
+               </children></AnchorPane>
+          <AnchorPane fx:id="runPane" prefHeight="410.0" prefWidth="1353.0">
+               <children>
+                  <TableView fx:id="parameters_table" prefHeight="373.0" prefWidth="1358.0" styleClass="mainFxmlClass" stylesheets="@../css/theme_abb.css">
+                    <columns>
+                      <TableColumn fx:id="param_name" prefWidth="75.0" text="Parameter Name" />
+                      <TableColumn prefWidth="75.0" text="Range">
+                           <columns>
+                              <TableColumn fx:id="minValue" prefWidth="75.0" text="MinValue" />
+                              <TableColumn fx:id="maxValue" prefWidth="75.0" text="MaxValue" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="testValue" prefWidth="75.0" text="Test Value" />
+                        <TableColumn fx:id="comment" prefWidth="75.0" text="Comment" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

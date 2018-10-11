@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="1805.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technoride.abb.vendorapp.controller.EntryPanelController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="1372.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technoride.abb.vendorapp.controller.EntryPanelController">
    <children>
       <HBox alignment="CENTER_RIGHT" onMouseClicked="#maximizeTheWindow" prefHeight="42.0" prefWidth="1085.0" styleClass="heading" stylesheets="@../css/theme_lime.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <FontAwesomeIconView glyphName="CLOSE" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#closeTheWindow" size="28" strokeType="OUTSIDE" textOrigin="CENTER" wrappingWidth="22.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#closeTheWindow" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="22.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER_RIGHT" layoutY="813.0" prefHeight="29.0" prefWidth="1085.0" styleClass="footer" stylesheets="@../css/theme_lime.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -30,40 +30,40 @@
             </Label>
          </children>
       </HBox>
-      <AnchorPane layoutY="40.0" prefHeight="225.0" prefWidth="1805.0" styleClass="theme" stylesheets="@../css/theme_lime.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutY="42.0" prefHeight="232.0" prefWidth="1613.0" styleClass="theme" stylesheets="@../css/theme_lime.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Label prefHeight="54.0" prefWidth="141.0" text="Barcode">
                <font>
                   <Font size="33.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER_LEFT" layoutX="165.0" prefHeight="54.0" prefWidth="630.0">
+            <HBox alignment="CENTER_LEFT" layoutX="165.0" prefHeight="54.0" prefWidth="368.0">
                <children>
-                  <FontAwesomeIconView glyphName="BARCODE" size="28" />
+                  <FontAwesomeIconView fill="#4615b2" glyphName="BARCODE" size="28" />
                   <Separator opacity="0.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #cddc39;" />
-                  <JFXTextField prefHeight="17.0" prefWidth="586.0">
+                  <JFXTextField fx:id="barcode" editable="false" focusColor="#4615b2" prefHeight="44.0" prefWidth="331.0" unFocusColor="#4615b2">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </JFXTextField>
                </children>
             </HBox>
-            <Label layoutX="795.0" layoutY="-1.0" prefHeight="54.0" prefWidth="159.0" text="Category">
+            <Label layoutX="572.0" prefHeight="54.0" prefWidth="159.0" text="Category">
                <font>
                   <Font size="33.0" />
                </font>
             </Label>
-            <Label layoutX="965.0" prefHeight="54.0" prefWidth="326.0" text="Catgegory">
+            <Label fx:id="category" layoutX="768.0" prefHeight="54.0" prefWidth="141.0" text="Catgegory">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label layoutX="1303.0" prefHeight="54.0" prefWidth="200.0" text="Sub-category">
+            <Label layoutX="924.0" prefHeight="54.0" prefWidth="200.0" text="Sub-category">
                <font>
                   <Font size="33.0" />
                </font>
             </Label>
-            <Label layoutX="1520.0" prefHeight="54.0" prefWidth="275.0" text="Sub-Category">
+            <Label fx:id="subcategory" layoutX="1214.0" layoutY="7.0" prefHeight="54.0" prefWidth="275.0" text="Sub-Category" AnchorPane.leftAnchor="1214.0" AnchorPane.rightAnchor="316.0">
                <font>
                   <Font size="26.0" />
                </font>
@@ -73,14 +73,14 @@
                   <Font size="33.0" />
                </font>
             </Label>
-            <JFXDatePicker fx:id="datePicker" defaultColor="#4615b2" layoutX="197.0" layoutY="76.0" prefHeight="31.0" prefWidth="283.0" showWeekNumbers="true" />
+            <JFXDatePicker fx:id="datePicker" defaultColor="#4615b2" layoutX="165.0" layoutY="76.0" prefHeight="44.0" prefWidth="200.0" showWeekNumbers="true" />
             <!--<Label fx:id="currentTimePane" layoutX="544.0" layoutY="64.0" prefHeight="54.0" prefWidth="116.0" text="Time">
                <font>
                   <Font size="33.0" />
                </font>
             </Label> -->
-            <JFXTimePicker fx:id="timePicker" defaultColor="#4615b2" editable="true" layoutX="660.0" layoutY="76.0" prefHeight="31.0" prefWidth="283.0" />
-            <Label fx:id="currentTimePane" alignment="CENTER" layoutX="965.0" layoutY="56.0" prefHeight="103.0" prefWidth="826.0" text="HH:MM:SS:MiMi">
+            <JFXTimePicker fx:id="timePicker" defaultColor="#4615b2" editable="true" layoutX="400.0" layoutY="86.0" prefHeight="44.0" prefWidth="200.0" />
+            <Label fx:id="currentTimePane" alignment="CENTER" layoutX="630.0" layoutY="57.0" prefHeight="103.0" prefWidth="330.0" text="HH:MM:SS:MiMi">
                <font>
                   <Font size="33.0" />
                </font>
@@ -90,39 +90,51 @@
                   <Font size="33.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER_LEFT" layoutX="165.0" layoutY="149.0" prefHeight="56.0" prefWidth="770.0">
+            <HBox alignment="CENTER_LEFT" layoutX="165.0" layoutY="149.0" prefHeight="56.0" prefWidth="415.0">
                <children>
-                  <FontAwesomeIconView glyphName="USER" size="28" />
-                  <JFXTextField fx:id="testingAuthority" alignment="CENTER" prefHeight="56.0" prefWidth="752.0">
+                  <FontAwesomeIconView fill="#4615b2" glyphName="USER" size="28" />
+                  <JFXTextField fx:id="testingAuthority" alignment="CENTER" prefHeight="56.0" prefWidth="387.0">
                      <font>
                         <Font name="System Bold" size="26.0" />
                      </font>
                   </JFXTextField>
                </children>
             </HBox>
-            <JFXButton buttonType="RAISED" defaultButton="true" layoutX="1039.0" layoutY="162.0" prefHeight="56.0" prefWidth="207.0" styleClass="buttonColor" stylesheets="@../css/theme_lime.css" text="FORM" AnchorPane.bottomAnchor="8.0">
+            <JFXButton buttonType="RAISED" defaultButton="true" layoutX="646.0" layoutY="168.0" onAction="#openBarCodeScannerWindow" prefHeight="56.0" prefWidth="170.0" styleClass="buttonColor" stylesheets="@../css/theme_lime.css" text="BAR CODE" AnchorPane.bottomAnchor="8.0">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="1290.0" layoutY="161.0" prefHeight="56.0" prefWidth="207.0" styleClass="buttonColor" stylesheets="@../css/theme_lime.css" text="RESET" AnchorPane.bottomAnchor="8.0">
+            <JFXButton buttonType="RAISED" layoutX="1043.0" layoutY="168.0" onAction="#submitResult" prefHeight="56.0" prefWidth="185.0" styleClass="buttonColor" text="SUBMIT" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="1043.0">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="1549.0" layoutY="163.0" prefHeight="54.0" prefWidth="207.0" styleClass="buttonColor" text="SUBMIT" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="1549.0">
+            <Label layoutX="973.0" layoutY="51.0" prefHeight="94.0" prefWidth="141.0" text="Test Result">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font size="28.0" />
                </font>
-            </JFXButton>
+            </Label>
+            <Label fx:id="testresult" layoutX="1135.0" layoutY="66.0" prefHeight="65.0" prefWidth="159.0" text="Label" AnchorPane.leftAnchor="1135.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1157.0" layoutY="-1.0" prefHeight="54.0" prefWidth="200.0" text="Label" />
          </children>
       </AnchorPane>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="264.0" prefHeight="549.0" prefWidth="1805.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="264.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="274.0" prefHeight="539.0" prefWidth="1372.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="274.0">
          <content>
-            <TableView prefHeight="552.0" prefWidth="1803.0">
+            <TableView fx:id="parameters_table" prefHeight="547.0" prefWidth="1512.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="param_name" prefWidth="234.00003051757812" text="Parameter Name" />
+                <TableColumn prefWidth="327.0" text="Range">
+                     <columns>
+                        <TableColumn fx:id="minValue" prefWidth="75.0" text="Min Value" />
+                        <TableColumn fx:id="maxValue" prefWidth="75.0" text="Max Value" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="testValue" prefWidth="874.0" text="Test Value" />
+                  <TableColumn fx:id="comment" prefWidth="75.0" text="Comment" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

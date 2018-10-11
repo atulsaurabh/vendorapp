@@ -4,6 +4,8 @@ package com.technoride.abb.vendorapp.configuration;
 import com.technoride.abb.vendorapp.loader.VendorAppLoader;
 import com.technoride.abb.vendorapp.task.DatabaseConnectionCheckTask;
 import com.technoride.abb.vendorapp.task.InitialTask;
+import com.technoride.abb.vendorapp.util.Util;
+import com.technoride.abb.vendorapp.util.VendorAppUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
@@ -67,5 +69,11 @@ public class BaseConfiguration
   public DatabaseConnectionCheckTask databaseConnectionCheckTask()
   {
     return new DatabaseConnectionCheckTask();
+  }
+
+  @Bean
+  public Util util()
+  {
+    return new VendorAppUtil();
   }
 }

@@ -8,6 +8,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
@@ -26,17 +28,11 @@ public class LoginController
     @Autowired
     private UserRepository userRepository;
     @FXML
-    private JFXTextField userName;
-    @FXML
-    private Label userNameError;
+    private TextField userName;
+
 
     @FXML
-    private JFXPasswordField password;
-
-    @FXML
-    private Label passwordError;
-
-    private boolean hasError;
+    private PasswordField password;
 
     private Stage window;
 
@@ -49,11 +45,7 @@ public class LoginController
 
     @FXML
     void performLogin(ActionEvent event) {
-        resetMessage();
-        hasError=false;
-        validate();
-        if(!hasError)
-        {
+
           if (userRepository.login(userName.getText(),password.getText()))
           {
               WindowAndController windowAndController = loader.load(GUIInfo.ENTRY_SCREEN);
@@ -63,9 +55,6 @@ public class LoginController
               Stage stage = new Stage();
               controller.setWindow(stage);
               stage.setScene(scene);
-              stage.setFullScreen(true);
-              stage.setAlwaysOnTop(true);
-              stage.initStyle(StageStyle.UNDECORATED);
               window.close();
               stage.show();
           }
@@ -77,7 +66,6 @@ public class LoginController
               alert.setHeaderText("Login Unsuccessful");
               alert.showAndWait();
           }
-        }
 
     }
 
@@ -85,28 +73,9 @@ public class LoginController
     void resetData(ActionEvent event) {
       userName.setText("");
       password.setText("");
-      resetMessage();
-    }
-
-    private void resetMessage()
-    {
-        userNameError.setText("");
-        passwordError.setText("");
-    }
-
-    private void validate()
-    {
-        if(userName.getText().trim().equals(""))
-        {
-            userNameError.setText("User name can not be blank");
-            hasError=true;
-        }
-        if (password.getText().trim().equals(""))
-        {
-            passwordError.setText("Password can not be blank");
-            hasError=true;
-        }
 
     }
+
+
 
 }

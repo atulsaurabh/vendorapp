@@ -2,13 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252ab2ae-9117-44bb-bb9e-4280af494726" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoggedInUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/BarcodeScannerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ErrorClassSelectorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ErrorClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/TestRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/TestResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ErrorClassRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/TestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/VendorAppUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/theme_abb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/theme_lime_1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gui/barcode_scanner_1.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gui/entry1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/css/theme_lime.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/theme_lime.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/entry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gui/entry.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gui/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/configuration/BaseConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/configuration/BaseConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/loader/GUIInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/loader/GUIInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/css/theme_lime.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/theme_lime.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/entry.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/entry.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,13 +46,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainScreenLoaderControoler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java">
+      <file leaf-file-name="EntryPanelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+            <state relative-caret-position="98">
+              <caret line="225" selection-start-line="225" selection-end-line="225" />
             </state>
           </provider>
         </entry>
@@ -32,48 +74,56 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntryPanelController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java">
+      <file leaf-file-name="ErrorClassSelectorController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ErrorClassSelectorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-402">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainScreenLoaderControoler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUIInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BarcodeScannerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/BarcodeScannerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1314#1947#0" expanded="true" />
-                <element signature="e#1946#1947#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#1109#1110#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entry.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/gui/entry.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="applicationContext.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="97" column="63" lean-forward="true" selection-start-line="97" selection-start-column="63" selection-end-line="97" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendorAppLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="135">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -84,10 +134,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\myworkplace\erps\vendorapp\src\main\resources\css</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,25 +162,46 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/task/InitialTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/task/CustomTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/task/Priority.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/task/DatabaseConnectionCheckTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/WindowAndController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/VendorApp.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/css/theme_lime.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoggedInUser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/gui/entry.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/xml/VendorTestParameter.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/css/theme_lime_1.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/KeyResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/css/theme_lime.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/TestRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ErrorClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/TestRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/TestResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/VendorAppUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ErrorClassRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/gui/Abb601Main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/gui/entry1.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/css/theme_abb.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/BarcodeScannerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/gui/barcode_scanner_1.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ErrorClassSelectorController.java" />
       </list>
     </option>
   </component>
@@ -156,9 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,7 +283,18 @@
               <item name="vendorapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vendorapp" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vendorapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendorapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vendorapp" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vendorapp" type="b2602c69:ProjectViewProjectNode" />
@@ -214,7 +302,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vendorapp" type="b2602c69:ProjectViewProjectNode" />
@@ -228,15 +315,25 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../erpecosystem" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\myworkplace\erps\vendorapp\src\main\resources\gui" />
+      <recent name="C:\myworkplace\erps\vendorapp\src\main\resources\css" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -311,6 +408,17 @@
       <workItem from="1538372911542" duration="7110000" />
       <workItem from="1538393435961" duration="4168000" />
       <workItem from="1538456834682" duration="18582000" />
+      <workItem from="1538541300546" duration="14104000" />
+      <workItem from="1538643707938" duration="2742000" />
+      <workItem from="1538715597852" duration="883000" />
+      <workItem from="1538804015741" duration="18438000" />
+      <workItem from="1538984561206" duration="6345000" />
+      <workItem from="1539048819768" duration="19189000" />
+      <workItem from="1539083137409" duration="4579000" />
+      <workItem from="1539148622152" duration="628000" />
+      <workItem from="1539155019236" duration="15313000" />
+      <workItem from="1539173443042" duration="441000" />
+      <workItem from="1539223214612" duration="4155000" />
     </task>
     <task id="LOCAL-00001" summary="Login Work is progress">
       <created>1538392172414</created>
@@ -330,69 +438,69 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29860000" />
+    <option name="totallyTimeSpent" value="116677000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32838285" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43564355" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25302014" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25987843" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32978722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39768976" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32905984" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25302014" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25987843" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43564355" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="2" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32978722" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39768976" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
@@ -410,75 +518,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/VendorApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/BarcodeScannerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="837">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        <state relative-caret-position="135">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/task/InitialTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/WindowAndController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -486,9 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,13 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -538,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
           <caret line="45" column="75" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -576,23 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -614,27 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/VendorApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/css/theme_lime.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -642,20 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/javafx/scene/control/TextField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="105" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="e#3264#3265#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,10 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="238" selection-start-line="238" selection-end-line="238" />
-          <folding>
-            <element signature="e#7505#7506#0" expanded="true" />
-            <element signature="e#7547#7548#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -684,58 +683,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/gui/entry.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="97" column="63" lean-forward="true" selection-start-line="97" selection-start-column="63" selection-end-line="97" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoggedInUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/xml/testdocument.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/css/theme_lime_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.1.0.RELEASE/spring-jdbc-5.1.0.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="260" selection-start-line="260" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/UserRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameters.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/css/theme_lime.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2079">
+          <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/VendorApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/TestRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ErrorClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/TestRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="88" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/TestResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/util/VendorAppUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ErrorClassRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/VendorAppLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/css/theme_abb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/BarcodeScannerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        <state relative-caret-position="504">
+          <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/MainScreenLoaderControoler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+        <state relative-caret-position="234">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1314#1947#0" expanded="true" />
-            <element signature="e#1946#1947#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="98">
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ErrorClassSelectorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-402">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
         </state>
       </provider>
     </entry>

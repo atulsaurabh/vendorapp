@@ -1,0 +1,65 @@
+.theme
+{
+    -fx-background-color:#263238;
+}
+
+.buttonColor
+{
+    -fx-background-color: #00e5ff;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 26;
+}
+
+.heading
+{
+    -fx-background-color: #000a12;
+}
+
+
+
+.label
+{
+    -fx-text-fill: white;
+}
+
+.footer
+{
+    -fx-background-color: #4f5b62;
+}
+
+.txtBarcodeBox
+{
+    -fx-border-color: #2979ff;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.jfx-date-picker .jfx-text-field{
+
+    -fx-font-size:20;
+}
+
+
+
+.jfx-password-field
+{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+.jfx-time-picker .jfx-text-field{
+
+    -fx-font-size:20;
+}
+
+.jfx-time-picker .label
+{
+    -fx-text-fill: #000000;
+}
+
+.jfx-text-field
+{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
