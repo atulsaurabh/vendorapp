@@ -1,47 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="theme" stylesheets="@../css/theme_lime.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technoride.abb.vendorapp.controller.LoginController">
-   <children>
-      <JFXTextField fx:id="userName" layoutX="86.0" layoutY="82.0" prefHeight="55.0" prefWidth="429.0" promptText="User Name">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </JFXTextField>
-      <JFXPasswordField fx:id="password" layoutX="86.0" layoutY="187.0" prefHeight="55.0" prefWidth="429.0" promptText="Password">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </JFXPasswordField>
-      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="86.0" layoutY="309.0" onAction="#performLogin" prefHeight="55.0" prefWidth="117.0" ripplerFill="WHITE" styleClass="buttonColor" text="Login" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="398.0" layoutY="309.0" onAction="#resetData" prefHeight="55.0" prefWidth="117.0" styleClass="buttonColor" text="Reset" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </JFXButton>
-      <Label fx:id="userNameError" layoutX="86.0" layoutY="137.0" prefHeight="21.0" prefWidth="429.0" textFill="#fb0303">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
-      <Label fx:id="passwordError" layoutX="86.0" layoutY="242.0" prefHeight="21.0" prefWidth="429.0" textFill="#fb0303">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/theme_abb.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technoride.abb.vendorapp.controller.LoginController">
    <effect>
       <DropShadow height="48.32" radius="22.9025" width="45.29" />
    </effect>
+   <children>
+      <SplitPane dividerPositions="0.7562814070351759" orientation="VERTICAL" prefHeight="407.0" prefWidth="600.0" styleClass="SplitPaneBackground">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane prefHeight="335.0" prefWidth="606.0" styleClass="LoginGridBackground">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="302.0" styleClass="LoginLabel" text="User Name" />
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="301.0" styleClass="LoginLabel" text="Password" GridPane.rowIndex="1" />
+                        <TextField fx:id="userName" styleClass="LoginTextField" GridPane.columnIndex="1" />
+                        <PasswordField fx:id="password" styleClass="LoginTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox alignment="CENTER" layoutY="-3.0" prefHeight="100.0" prefWidth="598.0" spacing="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#performLogin" styleClass="LoginButton" text="Login" />
+                        <Button mnemonicParsing="false" onAction="#resetData" styleClass="LoginButton" text="Reset" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
 </AnchorPane>
