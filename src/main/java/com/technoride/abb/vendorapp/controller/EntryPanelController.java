@@ -4,13 +4,14 @@ package com.technoride.abb.vendorapp.controller;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTimePicker;
-import com.technoride.abb.vendorapp.entity.Parameter;
-import com.technoride.abb.vendorapp.entity.ProductInfo;
-import com.technoride.abb.vendorapp.entity.TestRecord;
+import com.technoride.abb.vendorapp.entity.*;
 import com.technoride.abb.vendorapp.loader.GUIInfo;
 import com.technoride.abb.vendorapp.loader.VendorAppLoader;
 import com.technoride.abb.vendorapp.loader.WindowAndController;
+import com.technoride.abb.vendorapp.repository.OverloadParameterRepository;
 import com.technoride.abb.vendorapp.repository.ProductRepository;
+import com.technoride.abb.vendorapp.repository.ProductVarientRepository;
+import com.technoride.abb.vendorapp.repository.VarientRepository;
 import com.technoride.abb.vendorapp.util.Util;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -35,10 +36,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
+import java.util.stream.Collectors;
 
 
 @Controller
@@ -99,11 +99,19 @@ public class EntryPanelController
 
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private ProductVarientRepository productVarientRepository;
 
+    @Autowired
+    private VarientRepository varientRepository;
+    @Autowired
+    private OverloadParameterRepository overloadParameterRepository;
     private List<Parameter> parameters;
 
     private LocalDateTime startTime;
     private String dut;
+
+    private String codes;
     @FXML
     public void initialize() {
 
@@ -178,6 +186,41 @@ public class EntryPanelController
     {
 
         parameters= productRepository.getParamers(productcode);
+        List<ProductVarient> productVarients = productVarientRepository.getProductVarient(productcode);
+        if (!productVarients.isEmpty())
+        {
+            productVarients.stream().forEach(productVarient ->
+            {
+               List<Varient> varients=varientRepository.getVarientFromId(productVarient.getId());
+               Optional<Varient> dbvarient=varients.stream().filter(varient -> {
+                   String bar_part=barcode.getText().substring(productVarient.getStartchar(),
+                           productVarient.getEndchar()+1);
+                   return bar_part.equals(varient.getBarcode_part());
+               }).findFirst();
+               if (dbvarient.isPresent())
+               {
+                   subcategory.setText(productVarient.getVarientcode());
+                  List<Parameter> overloadedParameterList=overloadParameterRepository.getOverloadedParameter(dbvarient.get().getId());
+                  if (!overloadedParameterList.isEmpty())
+                  {
+                      List<Parameter> newParameters = new ArrayList<>();
+                      newParameters.addAll(parameters);
+                      newParameters.stream().forEach(parameter -> {
+                          overloadedParameterList.stream().forEach(overloadedParameter->{
+                              synchronized (overloadedParameter) {
+                                  if (overloadedParameter.getParametername().equalsIgnoreCase(parameter.getParametername())) {
+                                      parameter.setErrorrange(overloadedParameter.getErrorrange());
+                                      parameter.setCenter(overloadedParameter.getCenter());
+                                      parameter.setWarningrange(overloadedParameter.getWarningrange());
+                                  }
+                              }
+                          });
+                      });
+                  }
+               }
+
+            });
+        }
         param_name.setCellValueFactory(new PropertyValueFactory<>("parametername"));
         minValue.setCellValueFactory(new PropertyValueFactory<>("minvalue"));
         maxValue.setCellValueFactory(new PropertyValueFactory<>("maxvalue"));

@@ -7,12 +7,14 @@ import com.technoride.abb.vendorapp.task.InitialTask;
 import com.technoride.abb.vendorapp.util.Util;
 import com.technoride.abb.vendorapp.util.VendorAppUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
 
 @Configuration
 @ComponentScan(basePackages = {
@@ -31,6 +33,9 @@ public class BaseConfiguration
 
   @Autowired
   private Environment environment;
+
+
+
   @Bean(name = "vendorAppLoader")
     public VendorAppLoader vendorAppLoader()
   {
@@ -40,15 +45,17 @@ public class BaseConfiguration
   @Bean
   public DataSource dataSource()
   {
-    String url = environment.getProperty("db.url");
+    /*String url = environment.getProperty("db.url");
     String username = environment.getProperty("db.username");
     String password = environment.getProperty("db.password");
-    String driverClassName=environment.getProperty("db.driverClassName");
+    String driverClassName=environment.getProperty("db.driverClassName");*/
     DriverManagerDataSource dataSource=new DriverManagerDataSource();
-    dataSource.setDriverClassName(driverClassName);
-    dataSource.setPassword(password);
-    dataSource.setUrl(url);
-    dataSource.setUsername(username);
+    HashMap<String,String> dbMap = DbConfig.dbparams;
+    System.out.println(dbMap.get("db.driverClassName"));
+    dataSource.setDriverClassName(dbMap.get("db.driverClassName"));
+    dataSource.setPassword(dbMap.get("db.password"));
+    dataSource.setUrl(dbMap.get("db.url"));
+    dataSource.setUsername(dbMap.get("db.username"));
     return dataSource;
   }
 
