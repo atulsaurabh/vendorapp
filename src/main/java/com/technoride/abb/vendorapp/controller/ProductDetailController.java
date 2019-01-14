@@ -175,4 +175,53 @@ public class ProductDetailController
         paramTable.getItems().remove(analysisLimits);
     }
 
+
+    public void resetAllParameters(ActionEvent actionEvent)
+    {
+        paramTable.getItems().clear();
+    }
+
+
+    public void saveAll(ActionEvent actionEvent)
+    {
+        ProductInfo pInfo = productInfo.getSelectionModel().getSelectedItem();
+        if (pInfo == null)
+        {
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Choose product");
+            alert.setHeaderText("Not selected");
+            alert.setContentText("Kindly choose the product.\n If product is not available kindly press fetch button");
+            alert.show();
+            return;
+        }
+        if (paramTable.getItems().isEmpty())
+        {
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Empty");
+            alert.setHeaderText("No data found");
+            alert.setContentText("Add parameters to save");
+            alert.show();
+            return;
+        }
+        paramTable.getItems().stream().forEach(analysisLimits -> {
+            analysisLimits.setCategory(pInfo.getProductcode());
+        });
+        if(varientRepository.addAllParameters(paramTable.getItems()))
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Batch update");
+            alert.setHeaderText("Success");
+            alert.setContentText("All parameters saved successfully");
+            alert.show();
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Batch update");
+            alert.setHeaderText("Failure");
+            alert.setContentText("All parameters not saved successfully");
+            alert.show();
+        }
+    }
+
 }

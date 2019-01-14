@@ -1,7 +1,9 @@
 package com.technoride.abb.vendorapp.repository;
 
+import com.technoride.abb.vendorapp.entity.AnalysisLimits;
 import com.technoride.abb.vendorapp.entity.ProductInfo;
 import com.technoride.abb.vendorapp.entity.Varient;
+import javafx.collections.ObservableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.expression.spel.ast.Projection;
@@ -13,7 +15,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class VarientRepositoryImpl implements VarientRepository {
@@ -79,5 +83,44 @@ public class VarientRepositoryImpl implements VarientRepository {
                 return productInfos;
             }
         });
+    }
+
+
+    @Override
+    public boolean addAllParameters(ObservableList<AnalysisLimits> parameters) {
+        List<Object[]> objects = parameters.stream().map(this::getObjectArray).collect(Collectors.toList());
+        String batchQuery = "INSERT INTO analysislimits values(null,?,?,?,?,?,?,?,?,?,?)";
+
+        int [] results=jdbcTemplate.batchUpdate(batchQuery,objects,new int[]{
+            Types.VARCHAR,
+            Types.VARCHAR,
+            Types.DOUBLE,
+            Types.DOUBLE,
+            Types.DOUBLE,
+            Types.VARCHAR,
+            Types.TINYINT,
+            Types.DOUBLE,
+            Types.DOUBLE
+        });
+        return Arrays.stream(results).allMatch(value ->
+            value > 0
+        );
+    }
+
+    private Object [] getObjectArray(AnalysisLimits analysisLimits)
+    {
+        return new Object[]
+                {
+                        analysisLimits.getCategory(),
+                        analysisLimits.getParam_name(),
+                        analysisLimits.getCenter(),
+                        analysisLimits.getWarningpct(),
+                        analysisLimits.getErrorpct(),
+                        analysisLimits.getLabel(),
+                        analysisLimits.getVariable_limits(),
+                        analysisLimits.getLcl(),
+                        analysisLimits.getUcl(),
+                        analysisLimits.getCategory()
+                };
     }
 }

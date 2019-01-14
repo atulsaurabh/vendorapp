@@ -75,7 +75,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="981.0">
                <children>
-                  <SplitPane dividerPositions="0.7221654749744637" prefHeight="475.0" prefWidth="981.0" styleClass="SplitPaneBackground" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <SplitPane dividerPositions="0.4484167517875383" prefHeight="475.0" prefWidth="981.0" styleClass="SplitPaneBackground" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="381.0">
                            <children>
@@ -145,12 +145,12 @@
                                                 </HBox>
                                                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                                                    <children>
-                                                      <Button mnemonicParsing="false" styleClass="LoginButton" text="Reset" />
+                                                      <Button mnemonicParsing="false" onAction="#resetAllParameters" styleClass="LoginButton" text="Reset" />
                                                    </children>
                                                 </HBox>
                                                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
                                                    <children>
-                                                      <Button mnemonicParsing="false" styleClass="LoginButton" text="Save" />
+                                                      <Button mnemonicParsing="false" onAction="#saveAll" styleClass="LoginButton" text="Save" />
                                                    </children>
                                                 </HBox>
                                              </children>
@@ -161,7 +161,26 @@
                               </SplitPane>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.11677282377919321" layoutX="7.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="SplitPaneBackground" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <HBox alignment="CENTER" layoutX="6.0" layoutY="1.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label text="Label" />
+                                                <ComboBox prefWidth="150.0" />
+                                                <Button mnemonicParsing="false" text="Button" />
+                                                <Button mnemonicParsing="false" text="Button" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                </items>
+                              </SplitPane>
+                           </children></AnchorPane>
                     </items>
                   </SplitPane>
                </children></AnchorPane>
