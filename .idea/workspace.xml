@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd0757c8-d851-4f7d-b2b7-d10458ee4ab1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/AnalysisLimits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/vendorapp_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomProductCodeColumnCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/productdetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gui/productdetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/loader/GUIInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/loader/GUIInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendorapp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,13 +34,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductDetailController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductDetailController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+            <state relative-caret-position="163">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomProductCodeColumnCell.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomProductCodeColumnCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/AnalysisLimits.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomProductCodeColumnCell.java" />
       </list>
     </option>
   </component>
@@ -225,7 +225,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="vendorapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vendorapp" type="b2602c69:ProjectViewProjectNode" />
@@ -327,12 +327,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547437507758</updated>
-      <workItem from="1547437512059" duration="7688000" />
+      <workItem from="1547437512059" duration="8375000" />
     </task>
+    <task id="LOCAL-00001" summary="product inserted and fetched">
+      <created>1547451266461</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547451266461</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7688000" />
+    <option name="totallyTimeSpent" value="8375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="746" extended-state="6" />
@@ -353,7 +361,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
@@ -406,12 +414,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="product inserted and fetched" />
+    <option name="LAST_COMMIT_MESSAGE" value="product inserted and fetched" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java</url>
-          <line>83</line>
+          <line>84</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -563,10 +575,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        <state relative-caret-position="163">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomProductCodeColumnCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
           </folding>
         </state>
       </provider>

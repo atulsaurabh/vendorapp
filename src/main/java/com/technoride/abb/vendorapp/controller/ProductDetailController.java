@@ -1,5 +1,6 @@
 package com.technoride.abb.vendorapp.controller;
 
+import com.technoride.abb.vendorapp.custom.CustomProductCodeColumnCell;
 import com.technoride.abb.vendorapp.entity.AnalysisLimits;
 import com.technoride.abb.vendorapp.entity.ProductInfo;
 import com.technoride.abb.vendorapp.repository.VarientRepository;
@@ -66,7 +67,7 @@ public class ProductDetailController
         paramTable.setEditable(true);
         productCatColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         productCatColumn.setCellFactory(param -> {
-            return null;
+           return new CustomProductCodeColumnCell();
         });
         paramNameColumn.setCellValueFactory(new PropertyValueFactory<>("param_name"));
         centerColumn.setCellValueFactory(new PropertyValueFactory<>("center"));
