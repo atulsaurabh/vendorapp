@@ -135,12 +135,12 @@
                                              <children>
                                                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Button mnemonicParsing="false" onAction="#createNewParameter" styleClass="LoginButton" text="Add Row" />
+                                                      <Button mnemonicParsing="false" onAction="#createNewParameter" styleClass="LoginButton" text="Add Param" />
                                                    </children>
                                                 </HBox>
                                                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                                                    <children>
-                                                      <Button mnemonicParsing="false" styleClass="LoginButton" text="Delete Row" />
+                                                      <Button mnemonicParsing="false" onAction="#deleteSelectedParam" styleClass="LoginButton" text="Delete Param" />
                                                    </children>
                                                 </HBox>
                                                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">

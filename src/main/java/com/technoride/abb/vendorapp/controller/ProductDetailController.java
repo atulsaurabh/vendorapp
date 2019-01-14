@@ -1,6 +1,8 @@
 package com.technoride.abb.vendorapp.controller;
 
-import com.technoride.abb.vendorapp.custom.CustomProductCodeColumnCell;
+import com.technoride.abb.vendorapp.custom.CustomDoubleValuedColumnCell;
+import com.technoride.abb.vendorapp.custom.CustomShortValuedColumnCell;
+import com.technoride.abb.vendorapp.custom.CustomStringValueColumnCell;
 import com.technoride.abb.vendorapp.entity.AnalysisLimits;
 import com.technoride.abb.vendorapp.entity.ProductInfo;
 import com.technoride.abb.vendorapp.repository.VarientRepository;
@@ -64,19 +66,45 @@ public class ProductDetailController
 
     public void initialize()
     {
+        paramTable.getSelectionModel().setCellSelectionEnabled(true);
         paramTable.setEditable(true);
+
         productCatColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         productCatColumn.setCellFactory(param -> {
-           return new CustomProductCodeColumnCell();
+           return new CustomStringValueColumnCell();
         });
         paramNameColumn.setCellValueFactory(new PropertyValueFactory<>("param_name"));
+        paramNameColumn.setCellFactory(param -> {
+            return new CustomStringValueColumnCell();
+        });
         centerColumn.setCellValueFactory(new PropertyValueFactory<>("center"));
+        centerColumn.setCellFactory(param -> {
+            return new CustomDoubleValuedColumnCell();
+        });
         warnPctColumn.setCellValueFactory(new PropertyValueFactory<>("warningpct"));
+        warnPctColumn.setCellFactory(param -> {
+            return new CustomDoubleValuedColumnCell();
+        });
         errorPctColumn.setCellValueFactory(new PropertyValueFactory<>("errorpct"));
+        errorPctColumn.setCellFactory(param -> {
+            return new CustomDoubleValuedColumnCell();
+        });
         labelColumn.setCellValueFactory(new PropertyValueFactory<>("label"));
+        labelColumn.setCellFactory(param -> {
+            return new CustomStringValueColumnCell();
+        });
         vLimitColumn.setCellValueFactory(new PropertyValueFactory<>("variable_limits"));
+        vLimitColumn.setCellFactory(param -> {
+            return new CustomShortValuedColumnCell();
+        });
         lclColumn.setCellValueFactory(new PropertyValueFactory<>("lcl"));
+        lclColumn.setCellFactory(param -> {
+            return new CustomDoubleValuedColumnCell();
+        });
         uclColumn.setCellValueFactory(new PropertyValueFactory<>("ucl"));
+        uclColumn.setCellFactory(param -> {
+            return new CustomDoubleValuedColumnCell();
+        });
     }
 
 
@@ -138,6 +166,13 @@ public class ProductDetailController
     {
         AnalysisLimits analysisLimits = new AnalysisLimits();
         paramTable.getItems().add(analysisLimits);
+    }
+
+
+    public void deleteSelectedParam(ActionEvent actionEvent)
+    {
+        AnalysisLimits analysisLimits=paramTable.getFocusModel().getFocusedItem();
+        paramTable.getItems().remove(analysisLimits);
     }
 
 }
