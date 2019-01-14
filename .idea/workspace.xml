@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="252ab2ae-9117-44bb-bb9e-4280af494726" name="Default" comment="Product table is created">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/vendorapp_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/DbConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/OverloadParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductVarient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Varient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/OverloadParameterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/OverloadParameterRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductVarientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/ProductVarientRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/repository/VarientRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gui/errorselector.fxml" afterDir="false" />
+    <list default="true" id="252ab2ae-9117-44bb-bb9e-4280af494726" name="Default" comment="Vendor app completion with command line">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/VendorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/VendorApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/configuration/BaseConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/VendorApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/VendorApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/configuration/BaseConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/configuration/BaseConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/loader/GUIInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/loader/GUIInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendorapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vendorapp.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -169,7 +143,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547367482555" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547437160751" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/mysql-connector-java-8.0.13.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -273,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547018665066</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Vendor app completion with command line">
+      <created>1547367527638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547367527638</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -373,7 +354,8 @@
     <MESSAGE value="Login Work is progress" />
     <MESSAGE value="Login Work is progress with error" />
     <MESSAGE value="Product table is created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product table is created" />
+    <MESSAGE value="Vendor app completion with command line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vendor app completion with command line" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
