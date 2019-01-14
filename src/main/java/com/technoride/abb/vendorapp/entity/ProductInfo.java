@@ -5,6 +5,16 @@ public class ProductInfo {
     private String productname;
     private String productcode;
     private String serialnumber;
+    private String productcategorycode;
+
+
+    public String getProductcategorycode() {
+        return productcategorycode;
+    }
+
+    public void setProductcategorycode(String productcategorycode) {
+        this.productcategorycode = productcategorycode;
+    }
 
     public String getSerialnumber() {
         return serialnumber;
@@ -36,5 +46,10 @@ public class ProductInfo {
 
     public void setProductname(String productname) {
         this.productname = productname;
+    }
+
+    @Override
+    public String toString() {
+        return productname+"("+productcode+")";
     }
 }

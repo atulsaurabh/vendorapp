@@ -8,4 +8,5 @@ public interface GUIInfo {
     public static final String ENTRY_SCREEN="entry1.fxml";
     public static final String BARCODE_SCANNING_WINDOW="barcode_scanner_1.fxml";
     public static final String ERROR_CLASS_SELECTOR_WINDOW="errorselector.fxml";
+    public static final String VERIENT_ADD_SCREEN="productdetails.fxml";
 }

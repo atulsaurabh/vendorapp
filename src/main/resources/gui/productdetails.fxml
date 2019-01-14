@@ -2,8 +2,11 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -11,8 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="983.0" stylesheets="@../css/theme_abb.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="983.0" stylesheets="@../css/theme_abb.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technoride.abb.vendorapp.controller.ProductDetailController">
    <children>
       <SplitPane dividerPositions="0.3092369477911647" orientation="VERTICAL" prefHeight="695.0" prefWidth="983.0" styleClass="SplitPaneBackground" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <items>
@@ -36,7 +38,7 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField GridPane.columnIndex="1" />
+                        <TextField fx:id="productCode" GridPane.columnIndex="1" />
                         <Label prefHeight="30.0" prefWidth="253.0" styleClass="LoginLabel" text="Product Name" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS">
                            <GridPane.margin>
                               <Insets left="10.0" />
@@ -52,18 +54,18 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField GridPane.columnIndex="3" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="productName" GridPane.columnIndex="3" />
+                        <TextField fx:id="productCatCode" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="orderCode" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                         <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/theme_abb.css" GridPane.rowIndex="2" />
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <Button mnemonicParsing="false" styleClass="LoginButton" text="Save" />
+                              <Button defaultButton="true" mnemonicParsing="false" onAction="#saveProduct" styleClass="LoginButton" text="Save" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <children>
-                              <Button mnemonicParsing="false" styleClass="LoginButton" text="Reset" />
+                              <Button mnemonicParsing="false" onAction="#resetProductForm" styleClass="LoginButton" text="Reset" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
@@ -71,7 +73,98 @@
                   </GridPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="981.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="981.0">
+               <children>
+                  <SplitPane dividerPositions="0.7221654749744637" prefHeight="475.0" prefWidth="981.0" styleClass="SplitPaneBackground" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="381.0">
+                           <children>
+                              <SplitPane dividerPositions="0.8604651162790697" orientation="VERTICAL" prefHeight="475.0" prefWidth="546.0" styleClass="SplitPaneBackground" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.12468827930174564" orientation="VERTICAL" prefHeight="403.0" prefWidth="544.0" styleClass="SplitPaneBackground" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" layoutY="-3.0" prefHeight="62.0" prefWidth="544.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="125.0" styleClass="LoginLabel" text="Product" />
+                                                            <ComboBox fx:id="productInfo" prefHeight="26.0" prefWidth="229.0" />
+                                                            <Button mnemonicParsing="false" onAction="#fetchAllProducts" prefHeight="39.0" prefWidth="133.0" styleClass="LoginButton" text="Fetch" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="paramTable" prefHeight="347.0" prefWidth="544.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="productCatColumn" prefWidth="75.0" text="Category" />
+                                                          <TableColumn fx:id="paramNameColumn" prefWidth="112.0" text="P Name" />
+                                                            <TableColumn fx:id="centerColumn" prefWidth="75.0" text="Center" />
+                                                            <TableColumn fx:id="warnPctColumn" prefWidth="65.0" text="Warn_pct" />
+                                                            <TableColumn fx:id="errorPctColumn" prefWidth="116.0" text="Error_pct" />
+                                                            <TableColumn fx:id="labelColumn" prefWidth="75.0" text="Label" />
+                                                            <TableColumn fx:id="vLimitColumn" prefWidth="75.0" text="V_limits" />
+                                                            <TableColumn fx:id="lclColumn" prefWidth="75.0" text="LCL" />
+                                                            <TableColumn fx:id="uclColumn" prefWidth="75.0" text="UCL" />
+                                                        </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="544.0">
+                                       <children>
+                                          <GridPane layoutX="-2.0" layoutY="-6.0" prefHeight="70.0" prefWidth="544.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="152.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="184.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="0.0" prefWidth="115.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="101.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#createNewParameter" styleClass="LoginButton" text="Add Row" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="LoginButton" text="Delete Row" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="LoginButton" text="Reset" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="LoginButton" text="Save" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
         </items>
       </SplitPane>
    </children>

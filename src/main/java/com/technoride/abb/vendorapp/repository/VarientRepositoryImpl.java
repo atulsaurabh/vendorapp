@@ -1,14 +1,17 @@
 package com.technoride.abb.vendorapp.repository;
 
+import com.technoride.abb.vendorapp.entity.ProductInfo;
 import com.technoride.abb.vendorapp.entity.Varient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.expression.spel.ast.Projection;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +38,45 @@ public class VarientRepositoryImpl implements VarientRepository {
                     varients.add(varient);
                 }
                 return varients;
+            }
+        });
+    }
+
+    @Override
+    public boolean addProduct(Object[] parameters)
+    {
+
+        String query = "INSERT INTO product VALUES(?,?,?,?)";
+        return (jdbcTemplate.update(query,
+                parameters,
+                new int[]{
+                Types.VARCHAR,
+                Types.VARCHAR,
+                Types.VARCHAR,
+                        Types.VARCHAR
+        }) > 0);
+
+    }
+
+
+    @Override
+    public List<ProductInfo> getAllProductInfo() {
+        String query = "SELECT * FROM product";
+        return jdbcTemplate.query(query, new Object[]{}, new ResultSetExtractor<List<ProductInfo>>() {
+            @Override
+            public List<ProductInfo> extractData(ResultSet resultSet) throws SQLException, DataAccessException
+            {
+                List<ProductInfo> productInfos = new ArrayList<>();
+                while (resultSet.next())
+                {
+                    ProductInfo info = new ProductInfo();
+                    info.setBarcode(resultSet.getString("ordercode"));
+                    info.setProductcode(resultSet.getString("productcode"));
+                    info.setProductname(resultSet.getString("productname"));
+                    info.setProductcategorycode(resultSet.getString("product_cat_code"));
+                    productInfos.add(info);
+                }
+                return productInfos;
             }
         });
     }
