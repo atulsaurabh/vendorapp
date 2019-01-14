@@ -149,6 +149,7 @@ public class EntryPanelController
 
     }
 
+
     public void setWindow(Stage window) {
         this.window = window;
     }
@@ -170,6 +171,20 @@ public class EntryPanelController
         stage.show();
 
     }
+
+
+    @FXML
+    public void openProductDetailWindow(ActionEvent actionEvent)
+    {
+       WindowAndController windowAndController = loader.load(GUIInfo.VERIENT_ADD_SCREEN);
+       Stage stage = new Stage();
+       Scene scene = new Scene(windowAndController.getWindow());
+       stage.setScene(scene);
+       stage.show();
+
+
+    }
+
 
 
 

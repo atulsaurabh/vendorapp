@@ -27,6 +27,5 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
     <orderEntry type="library" name="Maven: com.jfoenix:jfoenix:8.0.7" level="project" />
     <orderEntry type="library" name="Maven: de.jensd:fontawesomefx:8.9" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-8.0.13" level="application" />
   </component>
 </module>
