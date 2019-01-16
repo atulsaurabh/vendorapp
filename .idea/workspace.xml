@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fd0757c8-d851-4f7d-b2b7-d10458ee4ab1" name="Default" comment="installer batch file generated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomStringValueColumnCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomStringValueColumnCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/technoride/abb/vendorapp/controller/EntryPanelController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomStringValueColumnCell.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="490">
+              <caret line="333" column="40" selection-start-line="333" selection-start-column="40" selection-end-line="333" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,7 +56,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomDoubleValuedColumnCell.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomShortValuedColumnCell.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/loader/GUIInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/ProductVarient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/entity/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomDoubleValuedColumCellForParameter.java" />
@@ -67,6 +67,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/EntryPanelController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomStringValueColumnCell.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java" />
       </list>
     </option>
   </component>
@@ -156,7 +157,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="vendorapp" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,7 +168,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547661623963" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547661698776" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -266,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547619270656</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="installer batch file generated">
+      <created>1547661631558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547661631559</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -281,7 +289,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.5387071" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.53790903" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="7" />
       <window_info id="DB Browser" order="8" />
@@ -323,7 +331,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.5387071" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.53790903" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="7" />
       <window_info id="DB Browser" order="8" />
@@ -581,16 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="341" selection-start-line="341" selection-end-line="341" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomDoubleValuedColumCellForParameter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -741,8 +739,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/custom/CustomStringValueColumnCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="48">
           <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/technoride/abb/vendorapp/controller/ProductDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="333" column="40" selection-start-line="333" selection-start-column="40" selection-end-line="333" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

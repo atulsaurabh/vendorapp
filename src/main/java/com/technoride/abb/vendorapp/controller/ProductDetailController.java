@@ -331,6 +331,7 @@ public class ProductDetailController
         }
 
         flag=false;
+        varianttable.getItems().clear();
         varient_product.getItems().clear();
     }
 
