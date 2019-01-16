@@ -38,7 +38,7 @@
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="328.0" styleClass="toplable" text="Serial No" textAlignment="CENTER" GridPane.columnIndex="2" />
                         <TextField fx:id="barcode" styleClass="topTextField" GridPane.columnIndex="1" />
                         <TextField fx:id="serialnumber" styleClass="topTextField" GridPane.columnIndex="3" />
-                        <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#openProductDetailWindow" styleClass="topbutton" text="Varient" textAlignment="CENTER" GridPane.rowIndex="4" />
+                        <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" styleClass="topbutton" text="Report" textAlignment="CENTER" GridPane.rowIndex="4" />
                         <Button mnemonicParsing="false" styleClass="topbutton" text="Certificate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <Button mnemonicParsing="false" onAction="#openBarCodeScannerWindow" styleClass="topbutton" text="Bar Code" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                         <Button mnemonicParsing="false" onAction="#submitResult" styleClass="topbutton" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="4" />

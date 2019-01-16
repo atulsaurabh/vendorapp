@@ -172,23 +172,6 @@ public class EntryPanelController
 
     }
 
-
-    @FXML
-    public void openProductDetailWindow(ActionEvent actionEvent)
-    {
-       WindowAndController windowAndController = loader.load(GUIInfo.VERIENT_ADD_SCREEN);
-       Stage stage = new Stage();
-       Scene scene = new Scene(windowAndController.getWindow());
-       stage.setScene(scene);
-       stage.show();
-
-
-    }
-
-
-
-
-
     public void setProductInfo(ProductInfo info)
     {
        barcode.setText(info.getBarcode());
