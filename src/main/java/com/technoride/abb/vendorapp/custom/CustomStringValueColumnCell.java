@@ -43,7 +43,7 @@ public class CustomStringValueColumnCell extends TableCell<AnalysisLimits,String
             switch(col)
             {
                 case 0:
-                    item.setCategory(newValue);
+                    item.setParam_name(newValue);
                     break;
                 case 4:
                     item.setLabel(newValue);
