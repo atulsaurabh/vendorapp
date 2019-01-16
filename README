@@ -1,0 +1,30 @@
+PRE-REQUISITE 
+
+1) Java version 1.8_181 or higher
+2) Mysql version 5.7 or higher
+3) MySQL Workbench
+4) Maven (Optional)
+4) Set Java path to environmental variable.
+
+
+Process for deployment:
+
+
+1) Copy the application directory (vendorapp) anywhere in the file system. Here and onward it is called installation directory.
+2) Create a configuration directory say dbconfig anywhere in the file system. Here and onward it is called configuration directory.
+3) Navigate to the installation directory and find dbproperties.properties.
+4) Copy the dbproperties.properties to configuration directory.
+5) Navigate to application directory and find run-app.bat
+6) Modify run-app.bat with any text editor.
+7) Provide the full path of configuration directory (not the path of dbproperties.properties file) to --db.configdir option
+like --db.configdir=c:\dbconfig
+8) Again navigate to installation directory and find run-app-config.bat.
+9) Modify the run-app-config.bat and provide full path of configuration directory to --db.configdir option.
+10) Open dbproperties.properties and provide the following information
+    a) db.driverClassName: The driver class of mysql usually com.mysql.jdbc.Driver
+    b) db.password :  The password for mysql usually password for suyojan
+    c) db.url: The url for mysql usually jdbc:mysql://localhost:3306/abblog
+    d) db.username : The username for mysql usually suyosys
+
+11) Open mysql workbench and import abb_dump_balnk.sql (kept inside installation directory) to create blank database.  
+
