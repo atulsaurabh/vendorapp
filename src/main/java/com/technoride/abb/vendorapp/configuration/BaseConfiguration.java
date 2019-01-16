@@ -14,7 +14,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.HashMap;
+import java.util.Properties;
 
 @Configuration
 @ComponentScan(basePackages = {
@@ -49,14 +52,25 @@ public class BaseConfiguration
     String username = environment.getProperty("db.username");
     String password = environment.getProperty("db.password");
     String driverClassName=environment.getProperty("db.driverClassName");*/
-    DriverManagerDataSource dataSource=new DriverManagerDataSource();
-    HashMap<String,String> dbMap = DbConfig.dbparams;
-    System.out.println(dbMap.get("db.driverClassName"));
-    dataSource.setDriverClassName(dbMap.get("db.driverClassName"));
-    dataSource.setPassword(dbMap.get("db.password"));
-    dataSource.setUrl(dbMap.get("db.url"));
-    dataSource.setUsername(dbMap.get("db.username"));
-    return dataSource;
+    try
+    {
+      HashMap<String,String> dbMap = DbConfig.dbparams;
+      File dbParamFile = new File(dbMap.get("db.configdir")+"/dbproperties.properties");
+      Properties properties = new Properties();
+      properties.load(new FileInputStream(dbParamFile));
+      DriverManagerDataSource dataSource=new DriverManagerDataSource();
+      dataSource.setDriverClassName(properties.getProperty("db.driverClassName"));
+      dataSource.setPassword(properties.getProperty("db.password"));
+      dataSource.setUrl(properties.getProperty("db.url"));
+      dataSource.setUsername(properties.getProperty("db.username"));
+      return dataSource;
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+      return null;
+    }
+
   }
 
   @Bean

@@ -1,8 +1,6 @@
 package com.technoride.abb.vendorapp.repository;
 
-import com.technoride.abb.vendorapp.entity.AnalysisLimits;
-import com.technoride.abb.vendorapp.entity.ProductInfo;
-import com.technoride.abb.vendorapp.entity.Varient;
+import com.technoride.abb.vendorapp.entity.*;
 import javafx.collections.ObservableList;
 
 import java.util.List;
@@ -12,4 +10,8 @@ public interface VarientRepository {
     public boolean addProduct(Object [] parameters);
     public List<ProductInfo> getAllProductInfo();
     public boolean addAllParameters(ObservableList<AnalysisLimits> parameters);
+    public boolean addVariant(ProductVarient productVarient,Varient varient);
+    public List<AnalysisLimits> getAllParameterFromProductCode(String productCode);
+    public List<ProductVarient> getAllProductVarientFromProductCode(String productCode);
+    public boolean addAllOverloadedVarient(List<AnalysisLimits> overload,long variantid);
 }

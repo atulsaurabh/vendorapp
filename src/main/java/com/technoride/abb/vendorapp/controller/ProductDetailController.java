@@ -1,15 +1,18 @@
 package com.technoride.abb.vendorapp.controller;
 
-import com.technoride.abb.vendorapp.custom.CustomDoubleValuedColumnCell;
-import com.technoride.abb.vendorapp.custom.CustomShortValuedColumnCell;
-import com.technoride.abb.vendorapp.custom.CustomStringValueColumnCell;
-import com.technoride.abb.vendorapp.entity.AnalysisLimits;
-import com.technoride.abb.vendorapp.entity.ProductInfo;
+import com.technoride.abb.vendorapp.custom.*;
+import com.technoride.abb.vendorapp.entity.*;
+import com.technoride.abb.vendorapp.loader.GUIInfo;
+import com.technoride.abb.vendorapp.loader.VendorAppLoader;
+import com.technoride.abb.vendorapp.loader.WindowAndController;
 import com.technoride.abb.vendorapp.repository.VarientRepository;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -26,13 +29,14 @@ public class ProductDetailController
     private TextField orderCode;
     @FXML
     private ComboBox<ProductInfo> productInfo;
-
+    @FXML
+    private ComboBox<ProductInfo> varient_product;
 
     @FXML
     private TableView<AnalysisLimits> paramTable;
 
-    @FXML
-    private TableColumn<AnalysisLimits, String> productCatColumn;
+    //@FXML
+    //private TableColumn<AnalysisLimits, String> productCatColumn;
 
     @FXML
     private TableColumn<AnalysisLimits, String> paramNameColumn;
@@ -58,10 +62,29 @@ public class ProductDetailController
     @FXML
     private TableColumn<AnalysisLimits, Double> uclColumn;
 
+    @FXML
+    private TableView<ProductVariantDetail> varianttable;
+
+    @FXML
+    private TableColumn<ProductVariantDetail, String> vcode;
+
+    @FXML
+    private TableColumn<ProductVariantDetail, Integer> stpos;
+
+    @FXML
+    private TableColumn<ProductVariantDetail, Integer> endpos;
+
+    @FXML
+    private TableColumn<ProductVariantDetail, String> barcode;
+
+
 
     @Autowired
     private VarientRepository varientRepository;
+    @Autowired
+    private VendorAppLoader loader;
 
+    private static boolean flag=false;
 
 
     public void initialize()
@@ -69,10 +92,10 @@ public class ProductDetailController
         paramTable.getSelectionModel().setCellSelectionEnabled(true);
         paramTable.setEditable(true);
 
-        productCatColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
-        productCatColumn.setCellFactory(param -> {
-           return new CustomStringValueColumnCell();
-        });
+      //  productCatColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+       // productCatColumn.setCellFactory(param -> {
+         //  return new CustomStringValueColumnCell();
+        //});
         paramNameColumn.setCellValueFactory(new PropertyValueFactory<>("param_name"));
         paramNameColumn.setCellFactory(param -> {
             return new CustomStringValueColumnCell();
@@ -105,6 +128,21 @@ public class ProductDetailController
         uclColumn.setCellFactory(param -> {
             return new CustomDoubleValuedColumnCell();
         });
+
+
+        varianttable.getSelectionModel().setCellSelectionEnabled(true);
+        varianttable.setEditable(true);
+
+        vcode.setCellValueFactory(new PropertyValueFactory<>("variantcode"));
+        vcode.setCellFactory(param -> {
+            return new CustomStringValuedColumCellForVariant();
+        });
+        stpos.setCellValueFactory(new PropertyValueFactory<>("startpos"));
+        stpos.setCellFactory(param -> new CustomIntegerValuedColumnCellFroVariant());
+        endpos.setCellValueFactory(new PropertyValueFactory<>("endpos"));
+        endpos.setCellFactory(param -> new CustomIntegerValuedColumnCellFroVariant());
+        barcode.setCellValueFactory(new PropertyValueFactory<>("barcode"));
+        barcode.setCellFactory(param -> new CustomStringValuedColumCellForVariant());
     }
 
 
@@ -162,6 +200,13 @@ public class ProductDetailController
     }
 
 
+    public void fetchProductForVariant(ActionEvent actionEvent)
+    {
+        varient_product.getItems().clear();
+        varient_product.getItems().addAll(varientRepository.getAllProductInfo());
+    }
+
+
     public void createNewParameter(ActionEvent actionEvent)
     {
         AnalysisLimits analysisLimits = new AnalysisLimits();
@@ -213,6 +258,7 @@ public class ProductDetailController
             alert.setHeaderText("Success");
             alert.setContentText("All parameters saved successfully");
             alert.show();
+            paramTable.getItems().clear();
         }
         else
         {
@@ -222,6 +268,80 @@ public class ProductDetailController
             alert.setContentText("All parameters not saved successfully");
             alert.show();
         }
+    }
+
+
+    public void createVarientRow(ActionEvent actionEvent)
+    {
+        ProductVariantDetail productVariantDetail = new ProductVariantDetail();
+        varianttable.getItems().add(productVariantDetail);
+    }
+
+
+    public void resetVariant(ActionEvent actionEvent)
+    {
+        varianttable.getItems().clear();
+    }
+
+
+    public void saveVariants(ActionEvent actionEvent)
+    {
+
+        ProductInfo productInfo = varient_product.getSelectionModel().getSelectedItem();
+        if (productInfo == null)
+        {
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Choose product");
+            alert.setHeaderText("Not selected");
+            alert.setContentText("Kindly choose the product.\n If product is not available kindly press fetch button");
+            alert.show();
+            return;
+        }
+        ObservableList<ProductVariantDetail> productVariantDetails = varianttable.getItems();
+        productVariantDetails.stream().forEach(productVariantDetail -> {
+            ProductVarient productVarient = new ProductVarient();
+            productVarient.setProductcode(productInfo.getProductcode());
+            productVarient.setVarientcode(productVariantDetail.getVariantcode());
+            productVarient.setStartchar(productVariantDetail.getStartpos());
+            productVarient.setEndchar(productVariantDetail.getEndpos());
+
+            Varient varient = new Varient();
+            varient.setBarcode_part(productVariantDetail.getBarcode());
+
+            if (!varientRepository.addVariant(productVarient,varient))
+            {
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Variant Operation");
+                alert.setHeaderText("Failure");
+                alert.setContentText("Variant is not added");
+                alert.show();
+                flag=true;
+                return;
+            }
+
+        });
+
+        if (!flag)
+        {
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Variant Operation");
+            alert.setHeaderText("Success");
+            alert.setContentText("Variants are added");
+            alert.show();
+        }
+
+        flag=false;
+        varient_product.getItems().clear();
+    }
+
+
+    public void openOverloadParamWindow(ActionEvent actionEvent)
+    {
+        WindowAndController windowAndController =  loader.load(GUIInfo.OVERLOAD_PARAM_SCREEN);
+        Stage stage = new Stage();
+        Scene scene = new Scene(windowAndController.getWindow());
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

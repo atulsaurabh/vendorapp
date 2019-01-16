@@ -1,13 +1,13 @@
 package com.technoride.abb.vendorapp.custom;
 
-import com.technoride.abb.vendorapp.entity.AnalysisLimits;
+import com.technoride.abb.vendorapp.entity.ProductVariantDetail;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.*;
 
-public class CustomDoubleValuedColumnCell extends TableCell<AnalysisLimits,Double>
+public class CustomIntegerValuedColumnCellFroVariant extends TableCell<ProductVariantDetail,Integer>
 {
-    private TextField doubleValueTextBox;
+    private TextField intValueTextField;
 
     @Override
     public void startEdit() {
@@ -16,19 +16,19 @@ public class CustomDoubleValuedColumnCell extends TableCell<AnalysisLimits,Doubl
             super.startEdit();
             createEntryBox();
             setText(null);
-            setGraphic(doubleValueTextBox);
-            doubleValueTextBox.selectAll();
-            doubleValueTextBox.requestFocus();
+            setGraphic(intValueTextField);
+            intValueTextField.selectAll();
+            intValueTextField.requestFocus();
         }
     }
 
 
     @Override
-    public void commitEdit(Double newValue) {
-        if (doubleValueTextBox.getText().equalsIgnoreCase(""))
+    public void commitEdit(Integer newValue) {
+        if (intValueTextField.getText().equalsIgnoreCase(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Value required.");
+            alert.setContentText("Parameter name required.");
             alert.setHeaderText("BLANK!!!");
             alert.setTitle("Required");
             alert.showAndWait();
@@ -37,28 +37,20 @@ public class CustomDoubleValuedColumnCell extends TableCell<AnalysisLimits,Doubl
         else
         {
             int k = getTableView().getSelectionModel().getFocusedIndex();
-            AnalysisLimits item = getTableView().getItems().get(k);
+            ProductVariantDetail item = getTableView().getItems().get(k);
             TablePosition position=getTableView().getSelectionModel().getSelectedCells().get(0);
             int col = position.getColumn();
             switch(col)
             {
                 case 1:
-                    item.setCenter(newValue);
+                    item.setStartpos(newValue);
                     break;
                 case 2:
-                    item.setWarningpct(newValue);
+                    item.setEndpos(newValue);
                     break;
-                case 3:
-                    item.setErrorpct(newValue);
-                    break;
-                case 6:
-                    item.setLcl(newValue);
-                    break;
-                case 7:
-                    item.setUcl(newValue);
-                    break;
+
             }
-            setText(doubleValueTextBox.getText());
+            setText(intValueTextField.getText());
             setGraphic(null);
         }
     }
@@ -69,7 +61,7 @@ public class CustomDoubleValuedColumnCell extends TableCell<AnalysisLimits,Doubl
     }
 
     @Override
-    protected void updateItem(Double item, boolean empty) {
+    protected void updateItem(Integer item, boolean empty) {
         super.updateItem(item, empty);
         if (empty)
         {
@@ -79,10 +71,10 @@ public class CustomDoubleValuedColumnCell extends TableCell<AnalysisLimits,Doubl
         else
         if (isEditing())
         {
-            if (this.doubleValueTextBox != null)
-                this.doubleValueTextBox.setText(null);
+            if (this.intValueTextField != null)
+                this.intValueTextField.setText(null);
             setText(null);
-            setGraphic(doubleValueTextBox);
+            setGraphic(intValueTextField);
         }
         else
         {
@@ -94,18 +86,18 @@ public class CustomDoubleValuedColumnCell extends TableCell<AnalysisLimits,Doubl
 
     private void createEntryBox()
     {
-        doubleValueTextBox=new TextField();
-        doubleValueTextBox.setMinWidth(this.getWidth() - this.getGraphicTextGap() * 2);
-        doubleValueTextBox.focusedProperty().addListener(new ChangeListener<Boolean>() {
+        intValueTextField =new TextField();
+        intValueTextField.setMinWidth(this.getWidth() - this.getGraphicTextGap() * 2);
+        intValueTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 if (!newValue) {
-                    commitEdit(Double.parseDouble(doubleValueTextBox.getText()));
+                    commitEdit(Integer.parseInt(intValueTextField.getText()));
                     getTableView().getSelectionModel().selectNext();
                     int currentColIndex = getTableView().getColumns().indexOf(getTableColumn());
                     TableColumn nextCol = getTableView().getColumns().get(currentColIndex+1);
                     if (nextCol != null)
-                    getTableView().edit(getTableRow().getIndex(), nextCol);
+                        getTableView().edit(getTableRow().getIndex(), nextCol);
                 }
             }
         });

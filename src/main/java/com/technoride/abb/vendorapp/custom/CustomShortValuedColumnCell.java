@@ -43,7 +43,7 @@ public class CustomShortValuedColumnCell extends TableCell<AnalysisLimits,Short>
             int col = position.getColumn();
             switch(col)
             {
-                case 6:
+                case 5:
                     item.setVariable_limits(newValue);
                     break;
             }

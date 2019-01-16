@@ -1,5 +1,9 @@
 package com.technoride.abb.vendorapp.entity;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.scene.control.CheckBox;
+
 public class AnalysisLimits
 {
     private String category;
@@ -11,6 +15,32 @@ public class AnalysisLimits
     private short variable_limits;
     private double lcl;
     private double ucl;
+    private BooleanProperty overload=new SimpleBooleanProperty();
+
+    private CheckBox checkBox=new CheckBox();
+
+
+    public CheckBox getCheckBox()
+    {
+        checkBox.selectedProperty().bindBidirectional(overload);
+        return checkBox;
+    }
+
+    public void setCheckBox(CheckBox checkBox) {
+        this.checkBox = checkBox;
+    }
+
+    public boolean isOverload() {
+        return overload.get();
+    }
+
+    public BooleanProperty overloadProperty() {
+        return overload;
+    }
+
+    public void setOverload(boolean overload) {
+        this.overload.set(overload);
+    }
 
     public String getCategory() {
         return category;

@@ -46,4 +46,10 @@ public class ProductVarient {
     public void setVarientcode(String varientcode) {
         this.varientcode = varientcode;
     }
+
+
+    @Override
+    public String toString() {
+        return varientcode;
+    }
 }
